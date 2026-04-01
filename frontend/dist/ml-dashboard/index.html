@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Buy/Sell Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>Stock Buy/Sell Prediction</h1>
+        <p class="subtitle">RandomForest model trained on your processed stock dataset</p>
+
+        <div class="search-row">
+          <input id="stockInput" type="text" placeholder="Search stock name, e.g. Axis Bank Ltd." />
+          <button id="predictBtn">Predict</button>
+        </div>
+
+        <p id="status" class="status"></p>
+
+        <div id="result" class="result hidden">
+          <div id="signalIcon" class="signal-icon">↑</div>
+          <div>
+            <p id="stockName" class="stock-name">-</p>
+            <p id="signalText" class="signal-text">-</p>
+            <p id="confidenceText" class="confidence-text">-</p>
+          </div>
+        </div>
+
+        <div id="priceInfo" class="price-grid hidden">
+          <div><span>Open</span><strong id="openVal">-</strong></div>
+          <div><span>High</span><strong id="highVal">-</strong></div>
+          <div><span>Low</span><strong id="lowVal">-</strong></div>
+          <div><span>Close</span><strong id="closeVal">-</strong></div>
+          <div><span>Volume</span><strong id="volumeVal">-</strong></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

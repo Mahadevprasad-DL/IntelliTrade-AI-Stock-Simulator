@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #021b1b, #043d3d);
+  color: white;
+}
+
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ffa6;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.nav-links li:hover {
+  color: #00ffa6;
+}
+
+.nav-buttons button {
+  margin-left: 10px;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1px solid #00ffa6;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.try-btn {
+  background: #00ffa6;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+/* Hero Section */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px;
+}
+
+
+.hero-left {
+  max-width: 500px;
+}
+
+.hero-left h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.start-btn {
+  background: #00ffa6;
+  border: none;
+  padding: 14px 28px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  background: #00cc88;
+}
+
+
+/* Right side images */
+
+.hero-right {
+  position: relative;
+}
+
+.image-box {
+  position: absolute;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+}
+
+.image-box.main img {
+  width: 280px;
+  height: 200px;
+}
+
+.main {
+  top: 50px;
+  left: 0;
+}
+
+.top {
+  top: -40px;
+  left: 200px;
+}
+
+.bottom {
+  top: 200px;
+  left: 200px;
+}
+
+
+/* AI badge */
+
+.ai-badge {
+  position: absolute;
+  top: 70px;
+  left: 90px;
+  background: #00ffa6;
+  color: black;
+  padding: 15px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+}

@@ -1,0 +1,140 @@
+:root {
+  --bg: #081720;
+  --card: #102733;
+  --text: #e9f6ff;
+  --muted: #8bb8cd;
+  --accent: #1ed6f9;
+  --buy: #22c55e;
+  --sell: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top right, #123446, var(--bg));
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(760px, 100%);
+  background: linear-gradient(155deg, rgba(16, 39, 51, 0.95), rgba(11, 28, 38, 0.95));
+  border: 1px solid rgba(30, 214, 249, 0.25);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.search-row {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(30, 214, 249, 0.35);
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text);
+}
+
+button {
+  border: 0;
+  padding: 0 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(130deg, #1ed6f9, #2d7ff9);
+  color: white;
+  font-weight: 700;
+}
+
+.status {
+  min-height: 24px;
+  color: var(--muted);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.result {
+  margin-top: 8px;
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.signal-icon {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.stock-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.signal-text,
+.confidence-text {
+  margin: 4px 0 0;
+}
+
+.price-grid {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
+.price-grid div {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.price-grid span {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.price-grid strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  .search-row {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    height: 42px;
+  }
+}
